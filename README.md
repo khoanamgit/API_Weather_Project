@@ -6,8 +6,8 @@ You can visit my Weather Forecast App at this **[LINK](https://khoanamgit.github
 
 **Desktop**
 
-![Desktop](./screenshots/img1.png)
-![Desktop](./screenshots/img2.png)
-![Desktop](./screenshots/img3.png)
+![Desktop](./screenshoot/img1.png)
+![Desktop](./screenshoot/img2.png)
+![Desktop](./screenshoot/img3.png)
 
 

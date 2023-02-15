@@ -1,7 +1,13 @@
-export default function currentCondition(data){
+export default function currentCondition(data,current){
     // const current = document.querySelector('.current-condition')
     let localtime = data.location.localtime.split(" ")
-    
+    const test = data.current.temp_c
+    if(test < 25){
+        current.style.backgroundImage = "url('https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-night_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70')"
+    }else{
+        //  url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+        current.style.backgroundImage = " url('https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70')"
+    }
     return  `
        
             <div class="currentCondition-header">

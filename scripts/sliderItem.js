@@ -23,7 +23,7 @@ const dayOfTheWeek = (a, b, c) => {
               <div class="carousel-item">
                 <div class="sub-item">
                     <div class="sub-day">
-                        ${day}
+                        ${day}, ${dd}-${mm}-${yy}
                     </div>
                     <img src=${e.day.condition.icon} alt="">
                     <div class="sub-temperature">

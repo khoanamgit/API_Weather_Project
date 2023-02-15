@@ -33,12 +33,16 @@ async function getWeather(inputValue){
 
     // http://api.weatherapi.com/v1/forecast.json?key=713bba47a51b403b86e31123230802&q=${inputValue}&days=7&aqi=yes&alerts=yes
     // http://api.weatherapi.com/v1/forecast.json?key=11b9921868184b8187175511231402&q=${inputValue}&days=7&aqi=yes&alerts=yes
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=713bba47a51b403b86e31123230802&q=${inputValue}&days=7&aqi=yes&alerts=yes`;
-    const res = await fetch(url)
-    const data = await res.json()
-    // console.log(data)
-
-    renderUI(data)
+    try{
+        const url = `https://api.weatherapi.com/v1/forecast.json?key=713bba47a51b403b86e31123230802&q=${inputValue}&days=7&aqi=yes&alerts=yes`;
+        const res = await fetch(url)
+        const data = await res.json()
+        // console.log(data)
+    
+        renderUI(data)
+    }catch{
+        alert("Không tồn tại địa điểm. Xin hãy nhập lại")
+    }
 }
 
 getWeather(place)

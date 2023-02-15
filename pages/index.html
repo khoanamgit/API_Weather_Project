@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather App</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            Weather
+        </div>
+        <div class="nav-search">
+            <form class="form-search">
+                <input type="text" class="input-search" placeholder="Search...">
+                <button class="btn-search" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <div class="nav-change">
+            <span>°C</span>
+            <span>|</span>
+            <span>°F</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="current-condition">
+            <!-- <div class="currentCondition-header">
+                <h1 class="current-place">
+                    Ho Chi Minh City, Vietnam <span>As of 9:43 am GMT+07:00</span>
+                </h1>
+            </div>
+            <div class="currentConditon-body">
+                <div class="condition-primary">
+                    <span class="temperature">
+                        29°
+                    </span>
+                    <div class="astro">
+                        Sunny
+                    </div>
+                    <div class="tempDayNight">
+                        <span class="day">Day: 30°</span>
+                        <span>|</span>
+                        <span class="night">Night: 22°</span>
+                    </div>
+                </div>
+                <div class="condition-second">
+                    <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="img">
+                </div>
+            </div> -->
+        </div>
+        <div class="today-forecast">
+            <!-- <div class="todayForecast-header">
+                <h2 class="todayForecast-title">
+                    Today's Forecast for Ho Chi Minh City, Vietnam
+                </h2>
+            </div>
+            <div class="today-weatherCard">
+                <ul class="today-weather-list">
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Morning
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Afternoon
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Evening
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Overnight
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="today-forecast-footer">
+                <a href="#" class="btn">
+                    Next Hours
+                </a>
+            </div> -->
+        </div>
+        <div class="today-weather">
+            <!-- <div class="todayForecast-header">
+                <h2 class="todayForecast-title">
+                    Today's Weather for Ho Chi Minh City, Vietnam
+                </h2>
+            </div>
+            <div class="today-detail-header">
+                <div class="today-detail-card">
+                    <span class="today-tempValue">30°</span>
+                    <span>Sunny</span>
+                </div>
+                <div class="today-sunrise">
+
+                </div>
+                <div class="today-detail-card-container">
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-temperature-three-quarters"></i>
+                            <span>High / Low</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>24°</span>
+                            <span>/</span>
+                            <span>30°</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>24°</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>23 km/h</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-water"></i>
+                            <span>Dew point</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>24°</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                            <span>Pressure</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>1008.1 mb</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>UV Index</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>3</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Visibility</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>9.66 km</span>
+                        </div>
+                    </div>
+                    <div class="today-detail-item">
+                        <div class="today-detail-lable">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <span>Snow</span>
+                        </div>
+                        <div class="today-detail-temp">
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="hourly-forecast">
+            <div class="todayForecast-header">
+                <h2 class="todayForecast-title">
+                    Hourly Forecast
+                </h2>
+            </div>
+            <div class="today-weatherCard">
+                <ul id="hour-list" class="today-weather-list">
+                    <!-- <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Now
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                8 pm
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                9 pm
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                10 pm
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                11 pm
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="today-forecast-footer">
+                <a href="./hourly.html" class="btn">
+                    Next Hours
+                </a>
+            </div>
+        </div>
+        <div class="daily-forecast">
+            <div class="todayForecast-header">
+                <h2 class="todayForecast-title">
+                    Daily Forecast
+                </h2>
+            </div>
+            <div  id="daily-list" class="today-weatherCard">
+                <!-- <ul id="daily-list" class="today-weather-list"> -->
+                    <!-- <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Today
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Tue 14
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Web 15
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Thu 16
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="today-weather-item">
+                        <a href="#" class="today-weather-content">
+                            <h3 class="today-session">
+                                Fri 17
+                            </h3>
+                            <div class="today-temp">
+                                30°
+                            </div>
+                            <div class="today-astro">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="img">
+                            </div>
+                            <div class="today-rain">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <span>1%</span>
+                            </div>
+                        </a>
+                    </li> -->
+                <!-- </ul> -->
+            </div>
+            <!-- <div class="today-forecast-footer">
+                <a href="#" class="btn">
+                    Next Hours
+                </a>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script type="module" src="../scripts/index.js"></script>
+<script type="module" src="../scripts/currentConition.js"></script>
+<script type="module" src="../scripts/todayForecast.js"></script>
+<script type="module" src="../scripts/todayWeather.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</html>

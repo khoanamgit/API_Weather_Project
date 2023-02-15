@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{padding: 0;}
+
+:root{
+    --blue-color: #1b4de4;
+    --blueNav-color: #005986;
+    --grayBlue-color: #295360;
+    --white-color: #fff;
+    --text-color:#2b2b2b;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    background-image: linear-gradient(0deg,#d8eeee,#d8eeee 25%,#64adc9 65%,#005986 90%,#005986);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    /* background-image: linear-gradient(0deg,#2a6377,#2a6377 20%,#214c61 60%,#213d4a 90%,#213d4a); */
+
+}
+
+
+
+.btn{
+    padding: 4px 8px;
+    border: none;
+    outline: none;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 50px;
+    font-size: 13px;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 20px; */
+    background-color: var(--blueNav-color);
+    padding: 11px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+}
+
+.logo{
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.nav-search{
+    padding: 5px 6px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fff3;
+    /* color: var(--white-color); */
+    border: 0;
+    width: 365px;
+}
+
+.input-search{
+    width: 85%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white-color);
+}
+
+.btn-search{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+.nav-change{
+    align-items: center;
+    color: var(--white-color);
+}
+
+/* Current Condition */
+
+.content{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px 10px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-condition{
+    margin-top: 80px;
+    background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    /* height: 200px; */
+    border-radius: 5px;
+
+}
+
+.currentCondition-header{
+    background-color: #0000008c;
+    padding: 10px 16px;
+    font-weight: 200;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.currentCondition-header .current-place{
+    font-size: 18px;
+    color: var(--white-color);  
+}
+
+.currentCondition-header .current-place span{
+    font-size: 13px;
+    color: var(--white-color);
+}
+
+.current-condition .currentConditon-body{
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.condition-primary .temperature{
+    font-size: 54px;
+    color: var(--white-color);
+}
+
+.condition-primary .astro{
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.condition-primary .tempDayNight{
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Today Forecast */
+.today-forecast{
+    background-color: var(--white-color);
+    width: 600px;
+    border-radius: 5px;
+}
+
+.today-forecast .todayForecast-header{
+    padding: 16px;
+}
+
+.today-forecast .today-weatherCard{
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.today-forecast-footer{
+    padding: 0 16px 11px 11px;
+}
+
+.today-weather-list{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.todayForecast-title{
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.today-weather-item{
+    padding: 0 15px;
+    text-align: center;
+}
+
+.today-weather-item .today-session{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.today-weather-item .today-temp{
+    font-size: 30px;
+    text-align: center;
+    color: var(--blue-color);
+}
+
+.today-weather-item .today-rain{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* Today weather */
+.today-weather{
+    background-color: var(--white-color);
+    width: 600px;
+    border-radius: 5px;
+}
+
+.today-detail-item{
+    /* display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    font-size: 16px;
+    color: var(--text-color);
+    border-top: 1px solid #dedede;
+    margin-right: 6px;
+}   
+
+.today-detail-card{
+    margin: 0 26px 25px 16px;
+}
+
+.today-detail-card-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.today-detail-lable span{
+    padding: 0 10px;
+}
+
+.today-weather .todayForecast-header{
+    padding: 16px;
+}
+
+.today-tempValue{
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--blue-color);
+}
+
+.today-detail-card{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Hourly Forecast */
+.hourly-forecast{
+    background-color: var(--white-color);
+    width: 600px;
+    border-radius: 5px;
+}
+
+.hourly-forecast .todayForecast-header{
+    padding: 16px;
+}
+
+.hourly-forecast .today-weatherCard{
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+/* Daily Forecast */
+.daily-forecast{
+    /* background-color: var(--white-color); */
+    width: 600px;
+    border-radius: 5px;
+    background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.daily-forecast .todayForecast-header{
+    padding: 16px;
+    background-color: #0000008c;
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+.daily-forecast .today-weatherCard{
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.daily-forecast .todayForecast-title{
+    color: var(--white-color);
+}
+
+#daily-list{
+    text-align: center;
+}
+
+/* Carosel */
+.sub-item{
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.sub-item img{
+    width: 70px;
+}

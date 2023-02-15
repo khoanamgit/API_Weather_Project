@@ -11,3 +11,8 @@ You can visit my Weather Forecast App at this **[LINK](https://khoanamgit.github
 ![Desktop](./screenshoot/img3.png)
 
 
+#Feature
+- Show current weather
+- Show weather in next hour
+- Change background went place have temperature < 25°C
+- Show weather on week

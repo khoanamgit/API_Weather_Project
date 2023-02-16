@@ -6,6 +6,13 @@
     text-decoration: none;
 }
 
+li,p{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+}
 
 :root{
     --blue-color: #1b4de4;
@@ -83,7 +90,7 @@ body{
     justify-items: center;
 }
 
-.card{
+.card-weather{
     background-color: var(--white-color);
     border-radius: 5px;
     box-shadow: 0 0 12px 0 #0003;
@@ -91,7 +98,7 @@ body{
 
 }
 
-.card-header{
+.card-weather-header{
     padding: 16px 26px 6px;
 }
 
@@ -142,4 +149,8 @@ body{
 
 .card-detail{
     border-top: 1px solid #dedede;
+}
+
+.dailypart-sub .detailpart-sub-item i{
+    color: #1b4de4;
 }

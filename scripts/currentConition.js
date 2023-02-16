@@ -1,13 +1,17 @@
-export default function currentCondition(data,current){
+export default function currentCondition(data,current,temp_c,body,navbar){
     // const current = document.querySelector('.current-condition')
     let localtime = data.location.localtime.split(" ")
     const test = data.current.temp_c
     
     if(test < 25){
         current.style.backgroundImage = "url('https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-night_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70')"
+        body.style.backgroundImage = "linear-gradient(0deg,#615878,#615878 20%,#464161 60%,#313050 90%,#313050)"
+        navbar.style.backgroundColor = "#313050"
     }else{
         //  url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
         current.style.backgroundImage = " url('https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70')"
+        body.style.backgroundImage = "linear-gradient(0deg,#d8eeee,#d8eeee 25%,#64adc9 65%,#005986 90%,#005986)"
+        navbar.style.backgroundColor = "#005986"
     }
     return  `
        
@@ -19,7 +23,7 @@ export default function currentCondition(data,current){
             <div class="currentConditon-body">
                     <div class="condition-primary">
                         <span class="temperature">
-                            ${data.current.temp_c}°C
+                            ${temp_c}°C
                         </span>
                     <div class="astro">
                         ${data.current.condition.text}

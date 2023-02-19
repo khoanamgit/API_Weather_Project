@@ -79,7 +79,7 @@ export default function todayForeCast(data){
                 </ul>
             </div>
             <div class="today-forecast-footer">
-                <a href="#" class="btn">
+                <a href="./pages/hourly.html" target="_blank" class="btn btn-primary">
                     Next Hours
                 </a>
             </div>

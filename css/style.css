@@ -34,12 +34,12 @@ body{
 
 
 .btn{
-    padding: 4px 8px;
+    /* padding: 4px 8px;
     border: none;
     outline: none;
     background-color: var(--blue-color);
-    color: var(--white-color);
-    border-radius: 50px;
+    border-radius: 50px; */
+    /* color: var(--white-color); */
     font-size: 13px;
 }
 

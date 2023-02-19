@@ -1,9 +1,6 @@
 import getWeather, { place } from "./index.js";
 
 
-console.log(place)
-
-
 const dayOfTheWeek = (a, b, c) => {
     const weekday = [
       "Sunday",
@@ -18,43 +15,77 @@ const dayOfTheWeek = (a, b, c) => {
 };
 
 const getHours = (data) => {
-    // console.log(data)
     const time = data.time
     const timeResult = time.split(" ")
-    // const [y,m,d] = timeDate[0].split("-")
-    // const date = new Date(y,m,d)
     return timeResult[1]
 }
+
 
 const cardHeader = document.querySelector(".card-weather-header")
 const cardHour = document.querySelector(".card-hour")
 const hourlyDate = document.querySelector(".hourlyDate")
 const hourltForecastList = document.querySelector(".hourlyForecast-list")
-// console.log(hourltForecastList)
-// let html
+// const btnC = document.querySelector('.nav-temp_c')
 const placeNew = localStorage.getItem("test")
-console.log(placeNew)
+localStorage.clear()
 
-getWeather(placeNew).then(data => {
-    console.log(data)
+function convertCelsiusToFahrenheit(tempCelsius) {
+    const tempFahrenheit = (tempCelsius * 9/5) + 32;
+    return tempFahrenheit;
+}
+
+function convertFahrenheitToCelsius(tempFahrenheit) {
+    const tempCelsius = (tempFahrenheit - 32) * 5/9;
+    return tempCelsius;
+}
+
+const btnC = document.querySelector('.nav-temp_c')
+let checkConvert = false
+btnC.addEventListener('click', function() {
+   checkConvert = !checkConvert
+  // Lấy tất cả các phần tử có class "daypart-temp" trên trang
+  const tempElements = document.querySelectorAll('.daypart-temp');
+  
+  // Lặp qua từng phần tử và chuyển đổi nhiệt độ từ độ C sang độ F
+  for (let i = 0; i < tempElements.length; i++) {
+    if(checkConvert){
+        const tempCelsius = parseFloat(tempElements[i].textContent);
+        const tempFahrenheit = convertCelsiusToFahrenheit(tempCelsius);
+        tempElements[i].textContent = tempFahrenheit.toFixed(1) + "°F";
+    }else{
+        const tempCelsius = parseFloat(tempElements[i].textContent);
+        const tempFahrenheit = convertFahrenheitToCelsius(tempCelsius);
+        tempElements[i].textContent = tempFahrenheit.toFixed(1) + "°C";
+    }
+  }
+});
+
+    
+    
+
+
+
+
+getWeather(!placeNew ? 'London' : placeNew).then(data => {
+  
 
     const [yy, mm, dd] = data.forecast.forecastday[0].date.split("-");
     const day = dayOfTheWeek(yy, mm, dd);
     const localtime = data.location.localtime.split(" ")
-    
+   
 
-    cardHeader.innerHTML = data.location.name
+    cardHeader.innerHTML = `${data.location.name}, ${data.location.country}`
     cardHour.innerHTML = `As of ${localtime[1]} GMT+07:00`
-    // hourlyDate.innerHTML = `${day}, ${dd}/${mm}/${yy}`
-
     const html = `
         <h2 class="hourlyDate">
             ${day}, ${dd}/${mm}/${yy}
         </h2>
         ${
+           
             data.forecast.forecastday[0].hour.map((d,idx)=> {
                 const timeDaypart = getHours(d)
-                // console.log(timeDaypart)
+                
+               
                 return `
  
                 <div class="card-detail">
@@ -128,7 +159,6 @@ getWeather(placeNew).then(data => {
                     </div>
                 </div>
             `
-            // console.log(html)
         }).join("")
     }
     

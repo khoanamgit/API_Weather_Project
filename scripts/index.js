@@ -14,8 +14,8 @@ const dailyF = document.querySelector("#daily-list")
 const hourF = document.querySelector("#hour-list")
 const body = document.querySelector("body")
 const navbar = document.querySelector(".navbar")
-// console.log(body)
-// const changeCtoF = document.querySelector(".nav-temp_f")
+
+
 
 let place = "London"
 let fetchedData
